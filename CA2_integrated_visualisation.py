@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib as plt
 
 st.title("Retail Dashboard Exploration")
 
@@ -43,7 +44,7 @@ st.subheader("Top 10 Products - Pie Chart")
 st.pyplot(
     top10.set_index("product")
          .plot.pie(
-             y="Count",
+             y="count",
              figsize=(8,8),
              legend=False
          ).figure
