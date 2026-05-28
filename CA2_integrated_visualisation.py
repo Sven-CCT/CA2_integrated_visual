@@ -46,3 +46,8 @@ st.subheader("Transactions Over Time")
 st.line_chart(daily_transactions)
 
 # Products purchased per transaction
+basket_sizes = data.groupby("transaction").size()
+
+st.subheader("Basket Size Distribution")
+
+st.bar_chart(basket_sizes.value_counts())
