@@ -20,3 +20,26 @@ data_load_state=st.text("Finished loading data..")
 
 st.subheader("Original Data")
 st.write(data)
+
+product_counts = data["itemDescription"].value_counts()
+
+product_df = product_counts.reset_index()
+product_df.columns = ["Product", "Count"]
+
+st.subheader("Product Frequency")
+st.dataframe(product_df)
+
+st.subheader("Top Products Bar Chart")
+
+st.bar_chart(
+    product_df.set_index("Product").head(20)
+)
+
+st.pyplot(
+    top10.set_index("Product")
+         .plot.pie(
+             y="Count",
+             figsize=(8,8),
+             legend=False
+         ).figure
+)
