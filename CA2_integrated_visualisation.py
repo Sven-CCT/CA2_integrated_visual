@@ -23,7 +23,7 @@ def load_data(nrows):
         + "_"
         + data["date"].dt.strftime("%d-%m-%Y")
     )
-    
+
     return data
 
 data_load_state=st.text("Data loading..")
@@ -57,9 +57,13 @@ st.subheader("Transactions Over Time")
 
 st.line_chart(daily_transactions)
 
-# Products purchased per transaction
-basket_sizes = data.groupby("transaction").size()
+selected_product = st.selectbox(
+    "Choose Product",
+    sorted(data["itemdescription"].unique())
+)
 
-st.subheader("Basket Size Distribution")
+filtered_product = data[
+    data["itemdescription"] == selected_product
+]
 
-st.bar_chart(basket_sizes.value_counts())
+st.write(filtered_product)
