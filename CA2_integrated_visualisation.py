@@ -17,6 +17,13 @@ def load_data(nrows):
         data[DATE_COLUMN],
         dayfirst=True
     )
+
+    data["transaction"] = (
+        data["member_number"].astype(str)
+        + "_"
+        + data["date"].dt.strftime("%d-%m-%Y")
+    )
+    
     return data
 
 data_load_state=st.text("Data loading..")
