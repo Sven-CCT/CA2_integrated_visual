@@ -24,7 +24,7 @@ st.write(data)
 product_counts = data["itemdescription"].value_counts()
 
 product_df = product_counts.reset_index()
-product_df.columns = ["Product", "Count"]
+product_df.columns = ["product", "count"]
 
 st.subheader("Product Frequency")
 st.dataframe(product_df)
@@ -32,13 +32,13 @@ st.dataframe(product_df)
 st.subheader("Top Products Bar Chart")
 
 st.bar_chart(
-    product_df.set_index("Product").head(20)
+    product_df.set_index("product").head(20)
 )
 
 st.pyplot(
-    top10.set_index("Product")
+    top10.set_index("product")
          .plot.pie(
-             y="Count",
+             y="count",
              figsize=(8,8),
              legend=False
          ).figure
