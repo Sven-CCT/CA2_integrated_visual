@@ -38,14 +38,3 @@ st.bar_chart(
 
 top10 = product_df.head(10)
 
-
-st.subheader("Top 10 Products - Pie Chart")
-
-st.pyplot(
-    top10.set_index("product")
-         .plot.pie(
-             y="count",
-             figsize=(8,8),
-             legend=False
-         ).figure
-)
