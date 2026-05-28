@@ -24,6 +24,9 @@ def load_data(nrows):
         + data["date"].dt.strftime("%d-%m-%Y")
     )
 
+    # Drop column transaction
+    data = data.drop("transaction", axis="columns")
+
     return data
 
 data_load_state=st.text("Data loading..")
