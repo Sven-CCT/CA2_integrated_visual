@@ -13,7 +13,10 @@ def load_data(nrows):
     lowercase=lambda x:str(x).lower()
     data.rename(lowercase, axis="columns", inplace=True)
     data.columns = data.columns.str.strip()
-    data[DATE_COLUMN]=pd.to_datetime(data[DATE_COLUMN])
+    data[DATE_COLUMN] = pd.to_datetime(
+        data[DATE_COLUMN],
+        dayfirst=True
+    )
     return data
 
 data_load_state=st.text("Data loading..")
