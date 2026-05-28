@@ -12,6 +12,7 @@ def load_data(nrows):
 
     lowercase=lambda x:str(x).lower()
     data.rename(lowercase, axis="columns", inplace=True)
+    data.columns = data.columns.str.strip()
     data[DATE_COLUMN]=pd.to_datetime(data[DATE_COLUMN])
     return data
 
