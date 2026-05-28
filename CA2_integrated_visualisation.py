@@ -21,7 +21,7 @@ data_load_state=st.text("Finished loading data..")
 st.subheader("Original Data")
 st.write(data)
 
-product_counts = data["itemDescription"].value_counts()
+product_counts = data["itemdescription"].value_counts()
 
 product_df = product_counts.reset_index()
 product_df.columns = ["Product", "Count"]
