@@ -38,3 +38,9 @@ st.bar_chart(
 
 top10 = product_df.head(10)
 
+# Transactions per day
+daily_transactions = data.groupby("date").size()
+
+st.subheader("Transactions Over Time")
+
+st.line_chart(daily_transactions)
