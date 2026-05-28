@@ -44,3 +44,5 @@ daily_transactions = data.groupby("date").size()
 st.subheader("Transactions Over Time")
 
 st.line_chart(daily_transactions)
+
+# Products purchased per transaction
