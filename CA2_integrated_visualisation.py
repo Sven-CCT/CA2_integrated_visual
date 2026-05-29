@@ -37,7 +37,7 @@ data_load_state.empty()
 
 data_load_state=st.text("Finished loading data..")
 
-time.sleep(3)
+time.sleep(2)
 data_load_state.empty()
 
 st.subheader("Original Data")
