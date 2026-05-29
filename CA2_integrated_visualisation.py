@@ -52,7 +52,7 @@ st.markdown(
         padding:15px;
         border-radius:10px;
     ">
-    <h1>🛒 Grocery Shopping Dashboard</h1>
+    <h1> Grocery Shopping Dashboard</h1>
     <p><b>Data exploration of grocery transactions over a two
     year time period, 2014-2015</b></p>
     </div>
@@ -61,6 +61,7 @@ st.markdown(
 )
 
 st.header("Introduction")
+
 
 st.header("Data metrics overview")
 
@@ -101,6 +102,9 @@ with col3:
         len(data)
     )
 
+st.info(
+    'This dashboard shows a sample of the dataset. Select "Show Detailed Data to access the full dataset." .'
+)
 st.subheader("Dataset overview - sample")
 st.write(data.head())
 
