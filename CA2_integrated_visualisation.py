@@ -49,6 +49,15 @@ st.markdown('''
             followed by visual explorations of specific data items. 
 ''')
 
+st.subheader("Data metrics overview")
+
+st.markdown('''
+            For the Grocery dataset we explore the following basic metrics: 
+             - Metric 1
+             - Metric 2
+             - Metric 3
+            ''')
+
 st.subheader("Original Data")
 st.write(data)
 
@@ -85,6 +94,14 @@ filtered_product = data[
 ]
 
 st.write(filtered_product)
+
+st.markdown('''
+            **This is a data exploration of grocery transaction over a two
+    year time period, 2014-2015**.  
+            At the start of the document there is a breakdown of general metrics
+            followed by visual explorations of specific data items. 
+''')
+
 
 #st.metric("Transactions", data["transaction"].nunique())
 st.metric("Customers", data["member_number"].nunique())
