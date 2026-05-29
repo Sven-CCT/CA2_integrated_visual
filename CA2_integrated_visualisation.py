@@ -31,7 +31,7 @@ def load_data(nrows):
     return data
 
 data_load_state=st.text("Data loading..")
-data=load_data(1000)
+data=load_data(5000)
 time.sleep(2)
 data_load_state.empty()
 
@@ -95,12 +95,6 @@ filtered_product = data[
 
 st.write(filtered_product)
 
-st.markdown('''
-            **This is a data exploration of grocery transaction over a two
-    year time period, 2014-2015**.  
-            At the start of the document there is a breakdown of general metrics
-            followed by visual explorations of specific data items. 
-''')
 
 
 #st.metric("Transactions", data["transaction"].nunique())
