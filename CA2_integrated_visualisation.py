@@ -80,6 +80,8 @@ st.markdown('''
             
 ''')
 
+st.divider()
+
 st.subheader("Basic Metrics")
 # Information cards placed horizontally
 col1, col2, col3 = st.columns(3)
@@ -123,6 +125,12 @@ product_df.columns = ["product", "count"]
 
 st.divider()
 
+st.success(
+    "Below we find the product listed as a bar chart. On the left side (Y-axis)" \
+    "we find the number of items sold indicated and at the bottom (x-axis) all products " \
+    "sold are listed."
+)
+
 st.subheader("Most Popular Products")
 
 st.bar_chart(
@@ -134,9 +142,13 @@ top10 = product_df.head(10)
 # Transactions per day
 daily_transactions = data.groupby("date").size()
 
+st.divider()
+
 st.subheader("Transactions Over Time")
 
 st.line_chart(daily_transactions)
+
+st.divider()
 
 st.subheader("Product Analyser")
 
