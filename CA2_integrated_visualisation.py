@@ -58,10 +58,26 @@ st.markdown('''
              - Metric 3
             ''')
 
-#st.metric("Transactions", data["transaction"].nunique())
-st.metric("Customers", data["member_number"].nunique())
-st.metric("Products", data["itemdescription"].nunique())
-st.metric("Records", len(data))
+# Information cards placed horizontally
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric(
+        "Customers",
+        data["member_number"].nunique()
+    )
+
+with col2:
+    st.metric(
+        "Products",
+        data["itemdescription"].nunique()
+    )
+
+with col3:
+    st.metric(
+        "Records",
+        len(data)
+    )
 
 st.subheader("Original Data")
 st.write(data)
