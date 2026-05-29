@@ -32,6 +32,8 @@ def load_data(nrows):
 
 data_load_state=st.text("Data loading..")
 data=load_data(1000)
+time.sleep(2)
+data_load_state.empty()
 
 data_load_state=st.text("Finished loading data..")
 
