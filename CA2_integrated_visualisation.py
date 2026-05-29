@@ -43,11 +43,11 @@ data_load_state.empty()
 st.header("Introduction")
 
 st.markdown('''
-            **This is a data exploration of grocery transaction over a two
+            **This is a data exploration of grocery transactions over a two
     year time period, 2014-2015**.
 ''')
 
-st.subheader("Data metrics overview")
+st.header("Data metrics overview")
 
 st.markdown('''
             At the start of the document there is a breakdown of general metrics
@@ -55,12 +55,12 @@ st.markdown('''
             
             For the Grocery dataset we explore the following items: 
 
-             - Basic metrics
+             - Basic Metrics
              - Popular items
              - Metric 3 
 ''')
 
-
+st.subheader("Basic Metrics")
 # Information cards placed horizontally
 col1, col2, col3 = st.columns(3)
 
