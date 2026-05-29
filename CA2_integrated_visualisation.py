@@ -102,8 +102,10 @@ with col3:
         len(data)
     )
 
+st.divider()    
+
 st.info(
-    'This dashboard shows a sample of the dataset. Select "Show Detailed Data to access the full dataset." .'
+    'This dashboard shows a sample of the dataset. Select "Show Detailed Data to access the full dataset."'
 )
 st.subheader("Dataset overview - sample")
 st.write(data.head())
@@ -118,6 +120,8 @@ product_df.columns = ["product", "count"]
 
 #st.subheader("Most popular products")
 #st.dataframe(product_df)
+
+st.divider()
 
 st.subheader("Most Popular Products")
 
