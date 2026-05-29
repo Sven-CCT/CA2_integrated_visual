@@ -40,6 +40,12 @@ data_load_state=st.text("Finished loading data..")
 time.sleep(2)
 data_load_state.empty()
 
+st.header("Overview")
+st.info(
+    "This is a data exploration of grocery transaction over a two"
+    "year time period 2014-2015."
+)
+
 st.subheader("Original Data")
 st.write(data)
 
