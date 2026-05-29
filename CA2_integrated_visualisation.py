@@ -40,12 +40,27 @@ data_load_state=st.text("Finished loading data..")
 time.sleep(2)
 data_load_state.empty()
 
-st.header("Introduction")
 
-st.markdown('''
-            **This is a data exploration of grocery transactions over a two
-    year time period, 2014-2015**.
-''')
+#st.markdown('''
+ #           **This is a data exploration of grocery transactions over a two
+  #  year time period, 2014-2015**.
+#''')
+st.markdown(
+    """
+    <div style="
+        background-color:#E8F1FA;
+        padding:15px;
+        border-radius:10px;
+    ">
+    <h1>🛒 Grocery Shopping Dashboard</h1>
+    <p>**This is a data exploration of grocery transactions over a two
+    year time period, 2014-2015**.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.header("Introduction")
 
 st.header("Data metrics overview")
 
