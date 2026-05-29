@@ -86,9 +86,8 @@ with col3:
         len(data)
     )
 
-#st.subheader("Dataset overview - sample")
-#st.write(data.head())
-st.subheader("Dataset Overview - Sample")
+st.subheader("Dataset overview - sample")
+st.write(data.head())
 
 if st.checkbox("Show Detailed Data"):
     st.dataframe(data)
