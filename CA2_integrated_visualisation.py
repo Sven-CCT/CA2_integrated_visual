@@ -31,6 +31,7 @@ def load_data(nrows):
 
 data_load_state=st.text("Data loading..")
 data=load_data(1000)
+
 data_load_state=st.text("Finished loading data..")
 
 st.subheader("Original Data")
