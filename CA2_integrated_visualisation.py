@@ -83,15 +83,15 @@ with col3:
     )
 
 st.subheader("Dataset overview")
-st.write(data)
+st.write(data.head())
 
 product_counts = data["itemdescription"].value_counts()
 
 product_df = product_counts.reset_index()
 product_df.columns = ["product", "count"]
 
-st.subheader("Product Frequency")
-st.dataframe(product_df)
+#st.subheader("Most popular products")
+#st.dataframe(product_df)
 
 st.subheader("Top Products Bar Chart")
 
