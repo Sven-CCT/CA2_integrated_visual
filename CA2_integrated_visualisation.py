@@ -43,8 +43,10 @@ data_load_state.empty()
 st.header("Overview")
 
 st.markdown('''
-            **This is a data exploration of grocery transaction over a two "
-    "year time period, 2014-2015**"
+            **This is a data exploration of grocery transaction over a two
+    year time period, 2014-2015**.  
+            At the start of the document there is a breakdown of general metrics
+            followed by visual explorations of specific data items. 
 ''')
 
 st.subheader("Original Data")
