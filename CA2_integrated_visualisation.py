@@ -56,7 +56,7 @@ st.markdown('''
             For the Grocery dataset we explore the following items: 
 
              - Basic Metrics
-             - Popular items
+             - Dataset overview
              - Metric 3 
 ''')
 
@@ -66,23 +66,23 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.metric(
-        "Customers",
+        "Number of customers",
         data["member_number"].nunique()
     )
 
 with col2:
     st.metric(
-        "Products",
+        "Number of products",
         data["itemdescription"].nunique()
     )
 
 with col3:
     st.metric(
-        "Records",
+        "Number of transactions",
         len(data)
     )
 
-st.subheader("Original Data")
+st.subheader("Dataset overview")
 st.write(data)
 
 product_counts = data["itemdescription"].value_counts()
