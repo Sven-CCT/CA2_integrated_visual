@@ -58,6 +58,11 @@ st.markdown('''
              - Metric 3
             ''')
 
+#st.metric("Transactions", data["transaction"].nunique())
+st.metric("Customers", data["member_number"].nunique())
+st.metric("Products", data["itemdescription"].nunique())
+st.metric("Records", len(data))
+
 st.subheader("Original Data")
 st.write(data)
 
@@ -97,7 +102,3 @@ st.write(filtered_product)
 
 
 
-#st.metric("Transactions", data["transaction"].nunique())
-st.metric("Customers", data["member_number"].nunique())
-st.metric("Products", data["itemdescription"].nunique())
-st.metric("Records", len(data))
