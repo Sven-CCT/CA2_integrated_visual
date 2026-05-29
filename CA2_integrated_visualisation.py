@@ -57,7 +57,11 @@ st.markdown('''
 
              - Basic Metrics
              - Dataset overview
-             - Metric 3 
+             - Product popularity distribution
+             - Transactions over time
+             - Product analyser
+             
+            
 ''')
 
 st.subheader("Basic Metrics")
@@ -82,7 +86,7 @@ with col3:
         len(data)
     )
 
-st.subheader("Dataset overview")
+st.subheader("Dataset overview - sample")
 st.write(data.head())
 
 product_counts = data["itemdescription"].value_counts()
@@ -93,7 +97,7 @@ product_df.columns = ["product", "count"]
 #st.subheader("Most popular products")
 #st.dataframe(product_df)
 
-st.subheader("Top Products Bar Chart")
+st.subheader("Product popularity distribution")
 
 st.bar_chart(
     product_df.set_index("product").head(20)
@@ -107,6 +111,8 @@ daily_transactions = data.groupby("date").size()
 st.subheader("Transactions Over Time")
 
 st.line_chart(daily_transactions)
+
+st.subheader("Product Analyser")
 
 selected_product = st.selectbox(
     "Choose Product",
