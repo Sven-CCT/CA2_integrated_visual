@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import time
 #import matplotlib.pyplot as plt
 
 st.title("Grocery Analysis")
@@ -33,6 +34,9 @@ data_load_state=st.text("Data loading..")
 data=load_data(1000)
 
 data_load_state=st.text("Finished loading data..")
+
+time.sleep(5)
+data_load_state.empty()
 
 st.subheader("Original Data")
 st.write(data)
