@@ -4,7 +4,7 @@ import numpy as np
 import time
 #import matplotlib.pyplot as plt
 
-st.title("Grocery Analysis")
+#st.title("Grocery Analysis")
 
 DATE_COLUMN = 'date'
 
@@ -53,8 +53,8 @@ st.markdown(
         border-radius:10px;
     ">
     <h1>🛒 Grocery Shopping Dashboard</h1>
-    <p>**This is a data exploration of grocery transactions over a two
-    year time period, 2014-2015**.</p>
+    <p><b>Data exploration of grocery transactions over a two
+    year time period, 2014-2015</b></p>
     </div>
     """,
     unsafe_allow_html=True
