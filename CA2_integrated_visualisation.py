@@ -48,6 +48,7 @@ st.markdown('''
             At the start of the document there is a breakdown of general metrics
             followed by visual explorations of specific data items.
             For the Grocery dataset we explore the following basic metrics: 
+            
              - Metric 1
              - Metric 2
              - Metric 3 
