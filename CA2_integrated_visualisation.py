@@ -86,8 +86,12 @@ with col3:
         len(data)
     )
 
-st.subheader("Dataset overview - sample")
-st.write(data.head())
+#st.subheader("Dataset overview - sample")
+#st.write(data.head())
+st.subheader("Dataset Overview - Sample")
+
+if st.checkbox("Show Detailed Data"):
+    st.dataframe(data)
 
 product_counts = data["itemdescription"].value_counts()
 
@@ -97,7 +101,7 @@ product_df.columns = ["product", "count"]
 #st.subheader("Most popular products")
 #st.dataframe(product_df)
 
-st.subheader("Product popularity distribution")
+st.subheader("Most Popular Products")
 
 st.bar_chart(
     product_df.set_index("product").head(20)
